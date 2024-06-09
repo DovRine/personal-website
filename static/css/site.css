@@ -1,0 +1,224 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: black;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    line-height: 1.5;
+    font-size: 16px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+        "profile-card profile-card"
+        "employment programming-skills"
+        "employment frameworks"
+        "employment language-skills"
+    ;
+    gap: 1rem;
+    padding: 8rem;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+h2 {
+    margin: 0;
+    font-size: 24px;
+    background-color: #343434;
+    padding: 0.25rem 0.5rem
+}
+
+.profile-card {
+    background-color: #232323;
+    padding: 20px;
+    min-width: 800px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    grid-area: profile-card;
+    grid-template-areas:
+        "header info"
+        "summary summary"
+        "highlights highlights";
+}
+
+.profile-card .highlights,
+.profile-card .summary {
+    margin: 10px 0;
+    line-height: 1.5;
+    color: #aaa;
+    font-size: 1.2rem;
+    font-weight: normal;
+}
+
+.profile-card .highlights {
+    grid-area: highlights;
+}
+
+.profile-card .summary {
+    grid-area: summary;
+}
+
+.profile-card header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    grid-area: header;
+}
+
+.profile-card img {
+    margin-right: 20px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.profile-card h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.profile-card h2 {
+    margin: 5px 0;
+    font-size: 18px;
+    font-weight: normal;
+    color: dodgerblue;
+    background: none;
+}
+
+.profile-card a {
+    color: dodgerblue;
+    text-decoration: none;
+}
+
+.profile-card .info {
+    margin-left: 3rem;
+    color: #aaa;
+    grid-area: info;
+}
+
+.profile-card .info .label {
+    display: inline-block;
+    margin-right: 1rem;
+    font-weight: bold;
+    width: 4rem;
+    text-align: right;
+    color: #fff;
+}
+
+
+.skill-bar {
+    margin: 14px 0;
+    font-size: 1rem;
+}
+
+.skill-bar p {
+    margin: 0;
+    padding: 0;
+}
+
+.bar {
+    font-size: 0.8rem;
+    width: 100%;
+    height: 1.3rem;
+    background-color: #3498db;
+    color: #ecf0f1;
+    color: black;
+    font-weight: bold;
+    text-align: right;
+    /* line-height: 30px; */
+    padding-right: 10px;
+}
+
+.programming-skills,
+.language-skills,
+.frameworks {
+    background-color: #232323;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.frameworks {
+    grid-area: frameworks;
+}
+
+.frameworks ul {
+    list-style: none;
+    padding: 0;
+}
+
+.frameworks ul li {
+    margin: 10px 0;
+}
+
+.language-skills {
+    grid-area: language-skills;
+}
+
+.dots {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.dot {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.dot.filled {
+    background-color: #3498db;
+}
+
+.dot.empty {
+    background-color: #7f8c8d;
+}
+
+.employment {
+    grid-area: employment;
+    background-color: #232323;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.employment .job {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+    line-height: 1.5;
+    color: #aaa;
+    font-size: 1.2rem;
+    font-weight: normal;
+}
+.employment .job > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+.employment .job .company {
+    font-weight: bold;
+    color: white;
+}
+.employment .job .title {
+    font-weight: bold;
+    color: dodgerblue;
+}
+.employment .job .impact {
+    margin: 1rem 0;
+    /* list-style: none; */
+    /* padding: 0; */
+}
