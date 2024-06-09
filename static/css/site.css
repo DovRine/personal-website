@@ -18,18 +18,18 @@ body {
         "profile-card profile-card"
         "employment programming-skills"
         "employment frameworks"
-        "employment language-skills"
-    ;
+        "employment language-skills";
     gap: 1rem;
     padding: 8rem;
     max-width: 1300px;
     margin: 0 auto;
 }
+
 h2 {
     margin: 0;
     font-size: 24px;
     background-color: #343434;
-    padding: 0.25rem 0.5rem
+    padding: 0.25rem 0.5rem;
 }
 
 .profile-card {
@@ -113,7 +113,6 @@ h2 {
     color: #fff;
 }
 
-
 .skill-bar {
     margin: 14px 0;
     font-size: 1rem;
@@ -133,7 +132,6 @@ h2 {
     color: black;
     font-weight: bold;
     text-align: right;
-    /* line-height: 30px; */
     padding-right: 10px;
 }
 
@@ -203,22 +201,107 @@ h2 {
     font-size: 1.2rem;
     font-weight: normal;
 }
+
 .employment .job > div {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 1rem;
 }
+
 .employment .job .company {
     font-weight: bold;
     color: white;
 }
+
 .employment .job .title {
     font-weight: bold;
     color: dodgerblue;
 }
+
 .employment .job .impact {
     margin: 1rem 0;
-    /* list-style: none; */
-    /* padding: 0; */
+}
+
+/* Media Queries */
+
+/* Large devices (desktops, 1024px and up) */
+@media (max-width: 1300px) {
+    body {
+        max-width: 1024px;
+        padding: 4rem;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 1024px) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "profile-card"
+            "employment"
+            "programming-skills"
+            "frameworks"
+            "language-skills";
+        padding: 2rem;
+    }
+
+    .profile-card {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "header"
+            "info"
+            "summary"
+            "highlights";
+    }
+
+    .profile-card .info {
+        margin-left: 0;
+    }
+}
+
+/* Small devices (phones, less than 768px) */
+@media (max-width: 768px) {
+    body {
+        padding: 1rem;
+    }
+
+    .profile-card {
+        min-width: 100%;
+        padding: 1rem;
+    }
+
+    .employment,
+    .programming-skills,
+    .frameworks,
+    .language-skills {
+        padding: 1rem;
+    }
+
+    .profile-card img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .profile-card h1 {
+        font-size: 20px;
+    }
+
+    .profile-card h2 {
+        font-size: 16px;
+    }
+
+    .profile-card .info .label {
+        width: 3rem;
+        text-align: left;
+    }
+
+    .skill-bar {
+        font-size: 0.8rem;
+    }
+
+    .bar {
+        height: 1rem;
+        font-size: 0.6rem;
+    }
 }
